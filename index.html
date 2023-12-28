@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <img class="layer-1" src="bg/Sky.png">
+        <img class="layer-2" src="bg/Sunrise.png">
+
+
+        <img class="layer-4" src="img/SM-MNT.png">
+        <img class="layer-5" src="img/LG-MNT.png">
+        <img class="layer-9" src="img/FLY-L.png">
+        <img class="layer-10" src="img/FLY-R.png">
+        <img class="layer-6" src="img/WATERFALL-1.png">
+        <img class="layer-7" src="img/WATERFALL-2.png">
+        <img class="layer-8" src="img/STONE.png">
+
+
+        <div class="layer-3">
+            <h1>Monique Winters Design</h1>
+            <p>Lorem ipsum dolor sit, suscipit? Amet consectetur adipisicing elit.</p>
+            <a href="#teks">Portfolio</a>
+        </div>
+    </div>
+
+    <div class="content" id="teks">
+        <h1>My Portfolio</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rem maiores quam, vero impedit magni aliquam accusantium cum necessitatibus assumenda. Eveniet pariatur architecto voluptate magnam tenetur dolore quibusdam dolores quo adipisci voluptatum molestias eaque est incidunt inventore sequi eos ducimus consectetur excepturi praesentium, facilis totam id quis assumenda. Autem quisquam, nihil voluptatum molestiae quibusdam deleniti libero distinctio eum? Ex natus non est eligendi illum ullam accusamus corporis quos! Iusto distinctio, sint aut voluptas recusandae sunt harum minus voluptatum atque non doloremque odit libero, molestiae repellendus cupiditate neque iure! A, quae.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione ea sunt eius magni dolore maiores velit officia accusamus cum eaque dolor harum ex ipsum beatae facilis, dolorem dicta sequi vitae quas? Atque natus officia enim labore, nisi nesciunt mollitia rerum iusto. Molestiae voluptas unde inventore reprehenderit sed nemo quos explicabo cum culpa asperiores. Nobis, sit. Quibusdam incidunt omnis autem dicta possimus quis vero tenetur sequi voluptatibus dolorum dolore doloribus suscipit quia repudiandae sunt nesciunt id eos corporis temporibus mollitia, explicabo quae. Similique natus dolor quasi corporis, quae odit, placeat fugit mollitia recusandae asperiores dolorem dolores!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptatem tenetur voluptate temporibus? Id, voluptatem quo! Voluptates cum facere voluptas quos, repellendus laboriosam natus reiciendis nisi dolore corrupti consequuntur sequi eveniet vel asperiores. Maiores tempora numquam aperiam! Amet quidem rem nam ipsam maiores. Modi, earum veritatis. Odio, sunt natus dolorem iste facere nobis sint explicabo, laudantium, et optio repellendus sapiente aspernatur voluptatem veritatis sequi harum est quo. Incidunt fugit, veritatis maxime magni, facilis quaerat autem quos nisi sunt dolores maiores?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sapiente alias temporibus eligendi dolor reiciendis corporis, officiis excepturi similique distinctio ducimus iusto, perferendis laboriosam quaerat enim laudantium exercitationem ipsa, officia placeat fugit. Quod sit, quam odit velit exercitationem error laborum corrupti quisquam officia dolor, laudantium accusantium qui hic fuga. Consequatur rerum dolor in praesentium quas, alias molestias saepe eaque provident laboriosam. Impedit mollitia eos, error velit consequatur doloremque id provident labore sequi incidunt magnam, nobis dolore omnis molestias officia unde natus placeat eveniet nesciunt nemo cumque. Atque alias amet ipsam quisquam totam, est reprehenderit beatae magnam porro fuga ea cum facere, incidunt illum quas. Minus ducimus repudiandae ad quos maiores.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptatem tenetur voluptate temporibus? Id, voluptatem quo! Voluptates cum facere voluptas quos, repellendus laboriosam natus reiciendis nisi dolore corrupti consequuntur sequi eveniet vel asperiores. Maiores tempora numquam aperiam! Amet quidem rem nam ipsam maiores. Modi, earum veritatis. Odio, sunt natus dolorem iste facere nobis sint explicabo, laudantium, et optio repellendus sapiente aspernatur voluptatem veritatis sequi harum est quo. Incidunt fugit, veritatis maxime magni, facilis quaerat autem quos nisi sunt dolores maiores?</p>
+    </div>
+
+    <script type="text/javascript">
+
+        let layer_1 = document.querySelector('.layer-1');
+        let layer_2 = document.querySelector('.layer-2');
+        let layer_3 = document.querySelector('.layer-3');
+        let layer_4 = document.querySelector('.layer-4');
+        let layer_5 = document.querySelector('.layer-5');
+        let layer_6 = document.querySelector('.layer-6');
+        let layer_7 = document.querySelector('.layer-7');
+        let layer_8 = document.querySelector('.layer-8');
+        let layer_9 = document.querySelector('.layer-9');
+        let layer_10 = document.querySelector('.layer-10');
+
+        window.onscroll = function(){
+            let Y = window.scrollY;
+            
+            layer_1.style.transform = 'translateY('+ Y/1 +'px)';
+            layer_2.style.transform = 'translateY('+ Y/-1000 +'px)';
+            layer_3.style.transform = 'translateY('+ Y/3 +'px)';
+            layer_4.style.transform = 'translateY('+ Y/.99 +'px)';
+            layer_5.style.transform = 'translateY('+ Y/1 +'px)';
+            layer_6.style.transform = 'translateY('+ Y/1.002 +'px)';
+            layer_7.style.transform = 'translateY('+ Y/1.05 +'px)';
+            layer_8.style.transform = 'translateY('+ Y/.75 +'px)';
+            layer_9.style.transform = 'translateY('+ Y/.9 +'px)';
+            layer_10.style.transform = 'translateY('+ Y/.9 +'px)';
+    }
+    </script>
+
+</body>
+</html>
