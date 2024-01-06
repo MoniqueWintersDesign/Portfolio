@@ -8,9 +8,86 @@ html {
 }
 
 body {
-    overflow: ;
     color: #fbffea;
     font-family: sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4) , transparent);
+    transition: .5s;
+}
+
+.header:hover:after {
+    left: 100%;
+}
+
+.logo {
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fbffea;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo img{
+    position: relative;
+    width: 1.3rem;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: #fbffea;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 2%;
+    font-size: 1.5rem;
+    color: #fbffea;
+    cursor: pointer;
+    display: none;
 }
 
 .banner {
@@ -22,7 +99,19 @@ body {
     background-color: #204476;
 }
 
-img {
+.banner p {
+    text-align: justify;
+    line-height: 20px;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.banner img {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -66,6 +155,19 @@ img {
     margin-bottom: 1rem;
 }
 
+.portfolio p{
+    text-align: justify;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-indent: 50px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    opacity: 0.7;
+}
+
 .portfolio-card{
     padding: 2rem;
     display: flex;
@@ -96,7 +198,7 @@ img {
     filter: drop-shadow(0 0 0.5rem #feffb7);
     border-radius: 8px;
     position: relative;
-}*/
+}
 
 .card .portfolio-name{
     display: flex;
@@ -124,22 +226,25 @@ img {
     font-weight: 500;
 }
 
-h1 {
+.contact h1 {
     text-align: center;
-    margin: 40px 0;
+    font-size: 20px;
+    margin-top: 300px;
+    margin-bottom: 10px;
 }
 
-p {
-    text-align: justify;
+.contact p {
+    text-align: left;
+    font-size: 9px;
+    color: #fbffea;
+    font-weight: bolder;
     line-height: 20px;
     letter-spacing: 1px;
-    text-indent: 50px;
     width: 100%;
     max-width: 900px;
     margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    opacity: 0.7;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .layer-3 {
@@ -147,6 +252,8 @@ p {
 }
 
 .layer-3 h1 {
+    text-align: center;
+    margin: 40px 0;
     margin-top: 40px;
     font-size: 20px;
 }
@@ -180,12 +287,73 @@ p {
     color: #0d1b30;
 }
 
+/* BREAKPOINTS */
+
+@media (max-width: 992px) {
+    .header {
+        padding: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
 
 @media (orientation: portrait){
     .banner {
         height: 95vh;
     }
     .layer-1 {
+        bottom: 9vw;
+    }
+    .layer- {
         bottom: 9vw;
     }
     .layer-9 {

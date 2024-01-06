@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Monique Winters Designer Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Monique Winters Portfolio</title>
 </head>
 <body>
+    
+    <header class="header">
+        <a href="#home" class="logo"><img src="MW.png" alt="logo"></a>
 
-    <div class="banner">
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="#home" style="--i:0;">Home</a>
+            <a href="#portfolio" style="--i:1;">Portfolio</a>
+            <a href="https://www.linkedin.com/in/moniquewintersdesign" style="--i:2;">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1lbdRemYlmtyL3Gg1R2Z3wowAqdHB3bPz/view?usp=share_link" style="--i:3;">Resume</a>
+            <a href="#contact" style="--i:4;">Contact</a>
+        </nav>
+    </header>
+
+    <div class="banner" id="home">
         <img class="layer-1" src="bg/Sky.png">
+        <img class="layer-0" src="bg/Moon.png">
         <img class="layer-2" src="bg/Sunrise.png">
-
         <img class="layer-4" src="img/SM-MNT.png">
         <img class="layer-5" src="img/LG-MNT.png">
         <img class="layer-9" src="img/FLY-L.png">
@@ -154,13 +172,20 @@
                 </div>
             </div>
         </div>
-
+    
+    <div class="contact" id="contact">
+        <h1>CONTACT ME</h1>
+                
+        <p><b>Email: moniquewintersdesign@gmail.com | linkedin: https://www.linkedin.com/in/moniquewintersdesign | Phone: 408-854-4168</b></p>
+    
     </div>
 
-   
+    
+      
 
     <script type="text/javascript">
 
+        let layer_0 = document.querySelector('.layer-0');
         let layer_1 = document.querySelector('.layer-1');
         let layer_2 = document.querySelector('.layer-2');
         let layer_3 = document.querySelector('.layer-3');
@@ -175,6 +200,7 @@
         window.onscroll = function(){
             let Y = window.scrollY;
             
+            layer_0.style.transform = 'translateY('+ Y/1.5 +'px)';
             layer_1.style.transform = 'translateY('+ Y/1 +'px)';
             layer_2.style.transform = 'translateY('+ Y/-1000 +'px)';
             layer_3.style.transform = 'translateY('+ Y/3 +'px)';
@@ -182,7 +208,7 @@
             layer_5.style.transform = 'translateY('+ Y/1 +'px)';
             layer_6.style.transform = 'translateY('+ Y/1.002 +'px)';
             layer_7.style.transform = 'translateY('+ Y/1.05 +'px)';
-            layer_8.style.transform = 'translateY('+ Y/1.05 +'px)';
+            layer_8.style.transform = 'translateY('+ Y/1 +'px)';
             layer_9.style.transform = 'translateY('+ Y/-400 +'px)';
             layer_10.style.transform = 'translateY('+ Y/-400 +'px)';
         }
@@ -190,7 +216,8 @@
         window.addEventListener("scroll",()=>{
             let value = window.scrollY;
            
-            layer_8.style.left = value * 1.5 + "px";
+            layer_0.style.right = value * 1 + "px";
+            layer_8.style.left = value * .1 + "px";
             layer_9.style.right = value * .3 + "px";
             layer_10.style.left = value * .4 + "px";
 
