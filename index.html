@@ -27,16 +27,21 @@
     </header>
 
     <div class="banner" id="home">
-        <img class="layer-1" src="bg/Sky.png">
-        <img class="layer-0" src="bg/Moon.png">
-        <img class="layer-2" src="bg/Sunrise.png">
-        <img class="layer-4" src="img/SM-MNT.png">
+        <img class="Sky" src="bg/Sky.png">
+        <img class="Moon" src="bg/Moon.png">
+        <img class="L_Clouds" src="bg/L-Clouds.png">
+        <img class="R_Clouds" src="bg/R-Clouds.png">
+        <img class="Sunrise" src="bg/Sunrise.png">
+        <img class="SM-MNT" src="img/SM-MNT.png">
         <img class="layer-5" src="img/LG-MNT.png">
-        <img class="layer-9" src="img/FLY-L.png">
-        <img class="layer-10" src="img/FLY-R.png">
-        <img class="layer-6" src="img/WATERFALL-1.png">
-        <img class="layer-7" src="img/WATERFALL-2.png">
-        <img class="layer-8" src="img/STONE.png">
+        <img class="FLY-L" src="img/FLY-L.png">
+        <img class="FLY-R" src="img/FLY-R.png">
+        <img class="WATERFALL_1" src="img/WATERFALL-1.png">
+        <img class="WATERFALL_2" src="img/WATERFALL-2.png">
+        <img class="STONE" src="img/STONE.png">
+        <img class="StoneMist" src="img/StoneMist.png">
+        <img class="L_Mist" src="img/L-Mist.png">
+        <img class="R_Mist" src="img/R-Mist.png">
 
         <div class="layer-3">
             <h1>Monique Winters UX/UI Designer</h1>
@@ -185,41 +190,56 @@
 
     <script type="text/javascript">
 
-        let layer_0 = document.querySelector('.layer-0');
-        let layer_1 = document.querySelector('.layer-1');
-        let layer_2 = document.querySelector('.layer-2');
+        let Moon = document.querySelector('.Moon');
+        let Sky = document.querySelector('.Sky');
+        let Sunrise = document.querySelector('.Sunrise');
         let layer_3 = document.querySelector('.layer-3');
-        let layer_4 = document.querySelector('.layer-4');
+        let SM_MNT = document.querySelector('.SM-MNT');
         let layer_5 = document.querySelector('.layer-5');
-        let layer_6 = document.querySelector('.layer-6');
-        let layer_7 = document.querySelector('.layer-7');
-        let layer_8 = document.querySelector('.layer-8');
-        let layer_9 = document.querySelector('.layer-9');
-        let layer_10 = document.querySelector('.layer-10');
+        let WATERFALL_1 = document.querySelector('.WATERFALL_1');
+        let WATERFALL_2 = document.querySelector('.WATERFALL_2');
+        let STONE = document.querySelector('.STONE');
+        let FLY_L = document.querySelector('.FLY-L');
+        let FLY_R = document.querySelector('.FLY-R');
+        let L_Clouds = document.querySelector('.L_Clouds');
+        let R_Clouds = document.querySelector('.R_Clouds');
+        let L_Mist = document.querySelector('.L_Mist');
+        let R_Mist = document.querySelector('.R_Mist');
+        let StoneMist = document.querySelector('.StoneMist');
 
         window.onscroll = function(){
             let Y = window.scrollY;
             
-            layer_0.style.transform = 'translateY('+ Y/1.5 +'px)';
-            layer_1.style.transform = 'translateY('+ Y/1 +'px)';
-            layer_2.style.transform = 'translateY('+ Y/-1000 +'px)';
+            Moon.style.transform = 'translateY('+ Y/1.5 +'px)';
+            Sky.style.transform = 'translateY('+ Y/1 +'px)';
+            Sunrise.style.transform = 'translateY('+ Y/-1000 +'px)';
             layer_3.style.transform = 'translateY('+ Y/3 +'px)';
-            layer_4.style.transform = 'translateY('+ Y/.99 +'px)';
+            SM_MNT.style.transform = 'translateY('+ Y/.99 +'px)';
             layer_5.style.transform = 'translateY('+ Y/1 +'px)';
-            layer_6.style.transform = 'translateY('+ Y/1.002 +'px)';
-            layer_7.style.transform = 'translateY('+ Y/1.05 +'px)';
-            layer_8.style.transform = 'translateY('+ Y/1 +'px)';
-            layer_9.style.transform = 'translateY('+ Y/-400 +'px)';
-            layer_10.style.transform = 'translateY('+ Y/-400 +'px)';
+            WATERFALL_1.style.transform = 'translateY('+ Y/1.002 +'px)';
+            WATERFALL_2.style.transform = 'translateY('+ Y/1.05 +'px)';
+            STONE.style.transform = 'translateY('+ Y/1 +'px)';
+            FLY_L.style.transform = 'translateY('+ Y/-400 +'px)';
+            FLY_R.style.transform = 'translateY('+ Y/-400 +'px)';
+            StoneMist.style.transform = 'translateY('+ Y/1 +'px)';
+            R_Mist.style.transform = 'translateY('+ Y/1 +'px)';
+            R_Clouds.style.transform = 'translateY('+ Y/1 +'px)';
+            L_Mist.style.transform = 'translateY('+ Y/1 +'px)';
+            L_Clouds.style.transform = 'translateY('+ Y/1 +'px)';
         }
 
         window.addEventListener("scroll",()=>{
             let value = window.scrollY;
            
-            layer_0.style.right = value * 1 + "px";
-            layer_8.style.left = value * .1 + "px";
-            layer_9.style.right = value * .3 + "px";
-            layer_10.style.left = value * .4 + "px";
+            Moon.style.right = value * 1 + "px";
+            STONE.style.left = value * .1 + "px";
+            StoneMist.style.left = value * 3 + "px";
+            R_Mist.style.left = value * .1 + "px";
+            R_Clouds.style.leftt = value * .1 + "px";
+            L_Mist.style.right = value * .1 + "px";
+            L_Clouds.style.right = value * .1 + "px";
+            FLY_L.style.right = value * .3 + "px";
+            FLY_R.style.left = value * .4 + "px";
 
         });
 
